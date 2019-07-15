@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'ButtonNavigator/buttonbar.dart';
+import 'login/page.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-      home: ButtonNavigationBar(),
+      home: Page(),
     );
   }
 
