@@ -126,6 +126,7 @@ Widget _CardBoard() {
         Row(
           children: <Widget>[
             Row(
+
               children: <Widget>[
                 CircleAvatar(
                   backgroundImage: AssetImage('lib/assets/9.jpg'),
@@ -168,6 +169,8 @@ Widget _CardBoard() {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Container(
+                height: 300,
+                width: 300,
                 child: Image(
               image: AssetImage("lib/assets/9.jpg"),
             )),
@@ -193,7 +196,7 @@ Widget _CardBoard() {
           height: 5,
         ),
         SizedBox(
-          height: 2,
+          height: 1,
           width: 500,
           child: const DecoratedBox(
             decoration: const BoxDecoration(
