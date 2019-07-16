@@ -5,10 +5,6 @@ class VideosScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Videos'),
-        backgroundColor: Colors.orange,
-      ),
       body: Center(
         child: Text('Videos Screen'),
       ),

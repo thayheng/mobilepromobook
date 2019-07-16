@@ -5,10 +5,6 @@ class ProfileScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Profile'),
-        backgroundColor: Colors.orange,
-      ),
       body: Center(
         child: Text('Profile Screen'),
       ),

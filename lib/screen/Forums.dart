@@ -5,10 +5,6 @@ class ForumsScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Forums'),
-        backgroundColor: Colors.orange,
-      ),
       body: Center(
         child: Text('Forums Screen'),
       ),
