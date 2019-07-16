@@ -3,27 +3,252 @@ import 'package:flutter/material.dart';
 class BoardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return Scaffold(
-      body: Container(
+    return new Material(
+      child: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('images/Screenshot.png'),
+          color: Colors.white30,
+        ),
+        child: Center(
+          child: ListView(
+            children: <Widget>[
+              makePopularWidget(),
+              SizedBox(
+                height: 15,
+              ),
+              _CardBoard(),
+              SizedBox(
+                height: 15,
+              ),
+              _CardBoard(),
+              SizedBox(
+                height: 15,
+              ),
+              _CardBoard(),
+              SizedBox(
+                height: 15,
+              ),
+              _CardBoard(),
+              SizedBox(
+                height: 15,
+              ),
+              _CardBoard(),
+            ],
           ),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      ),
+    );
+  }
+
+  Widget makePopularWidget() {
+    return new Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 0.01, // has the effect of softening the shadow
+            spreadRadius: 0.01, // has the effect of extending the shadow
+          )
+        ],
+      ),
+      padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+      height: 100,
+      child: Column(
+        children: <Widget>[
+          Container(
+            height: 80,
+            child: ListView(
+                scrollDirection: Axis.horizontal,
+                //shrinkWrap: true,
+                children: makeContainers()),
+          )
+        ],
+      ),
+    );
+  }
+
+  int counter = 0;
+  List<Widget> makeContainers() {
+    List<Container> movieList = [];
+    for (int i = 0; i < 12; i++) {
+      counter++;
+      movieList.add(
+        new Container(
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: Colors.orange,
+          ),
+          padding: EdgeInsets.all(1),
+          height: 80,
+          width: 87,
+          child: _subimagerow1(counter),
+        ),
+      );
+      if (counter == 12) {
+        counter = 0;
+      }
+    }
+    return movieList;
+  }
+}
+
+Widget _subimagerow1(counter) {
+  return Row(
+    children: <Widget>[
+      SizedBox(
+        width: 2,
+      ),
+      CircleAvatar(
+        radius: 40,
+        foregroundColor: Colors.orange,
+        backgroundImage:
+            AssetImage("lib/assets/" + counter.toString() + ".jpg"),
+      ),
+    ],
+  );
+}
+
+Widget _CardBoard() {
+  return Container(
+    decoration: BoxDecoration(
+      color: Colors.white,
+      boxShadow: [
+        BoxShadow(
+          color: Colors.black12,
+          blurRadius: 0.01, // has the effect of softening the shadow
+          spreadRadius: 0.01, // has the effect of extending the shadow
+        )
+      ],
+    ),
+    padding: EdgeInsets.all(10),
+    child: Column(
+      children: <Widget>[
+        Row(
           children: <Widget>[
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text('Board Screen'),
+                CircleAvatar(
+                  backgroundImage: AssetImage('lib/assets/9.jpg'),
+                )
+              ],
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text('Pizza Company'),
+                Row(
+                  children: <Widget>[
+                    Text('3 hrs'),
+                    Icon(
+                      Icons.public,
+                      size: 15,
+                    ),
+                  ],
+                )
               ],
             )
           ],
         ),
-//        child: Text('Board Screen'),
-      ),
-    );
-  }
+        SizedBox(
+          height: 5,
+        ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text('Hello we have promotion today for 100% off. Only Today!')
+          ],
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Container(
+                child: Image(
+              image: AssetImage("lib/assets/9.jpg"),
+            )),
+          ],
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[Text('1.8K Likes')],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: <Widget>[Text('2.2K Shares')],
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        SizedBox(
+          height: 2,
+          width: 500,
+          child: const DecoratedBox(
+            decoration: const BoxDecoration(
+              color: Colors.black12,
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Icon(
+                  Icons.thumb_up,
+                  color: Colors.black26,
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Text('Like'),
+              ],
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Icon(
+                  Icons.map,
+                  color: Colors.black26,
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Text('Map'),
+              ],
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: <Widget>[
+                Icon(
+                  Icons.share,
+                  color: Colors.black26,
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Text('Share'),
+              ],
+            ),
+          ],
+        ),
+      ],
+    ),
+  );
 }

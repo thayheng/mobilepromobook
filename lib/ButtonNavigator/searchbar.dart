@@ -9,16 +9,19 @@ class SearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 50,
-      padding: EdgeInsets.fromLTRB(8, 5, 0, 5),
+      padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
       child: TextField(
         onChanged: onTextChange,
         decoration: InputDecoration(
-            fillColor: Colors.black.withOpacity(0.1),
+            fillColor: Colors.white,
             filled: true,
-            prefixIcon: Icon(Icons.search),
+            prefixIcon: Icon(
+              Icons.search,
+              color: Colors.orange,
+            ),
             hintText: 'Search something ...',
             border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(20),
                 borderSide: BorderSide.none),
             contentPadding: EdgeInsets.zero),
       ),

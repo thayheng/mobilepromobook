@@ -45,10 +45,11 @@ class ButtonNavigationBar extends StatelessWidget {
 
 Widget _AppBar() {
   return AppBar(
+    leading: Icon(Icons.notifications, color: Colors.white,),
     title: SearchBar(),
     actions: <Widget>[
       IconButton(
-        icon: Icon(Icons.chat),
+        icon: Icon(Icons.chat, color: Colors.white,),
       ),
     ],
     backgroundColor: Colors.orange,
