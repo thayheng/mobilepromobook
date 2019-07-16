@@ -170,10 +170,11 @@ Widget _CardBoard() {
           children: <Widget>[
             Container(
                 height: 300,
-                width: 300,
+                width: 380,
                 child: Image(
               image: AssetImage("lib/assets/9.jpg"),
-            )),
+              fit: BoxFit.cover,
+            ),),
           ],
         ),
         SizedBox(

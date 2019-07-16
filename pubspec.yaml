@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  video_player: ^0.10.1+4
 
   google_maps_flutter: ^0.5.19+2
   location: ^2.3.5
@@ -40,5 +41,6 @@ flutter:
     - lib/assets/10.jpg
     - lib/assets/11.jpg
     - lib/assets/12.jpg
+    - lib/assets/22.jpg
     - lib/assets/birdboxBanner.jpg
 
