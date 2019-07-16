@@ -13,25 +13,53 @@ class BoardScreen extends StatelessWidget {
             children: <Widget>[
               makePopularWidget(),
               SizedBox(
-                height: 15,
+                height: 10,
               ),
-              _CardBoard(),
+              _CardBoard('1'),
               SizedBox(
-                height: 15,
+                height: 10,
               ),
-              _CardBoard(),
+              _CardBoard('2'),
               SizedBox(
-                height: 15,
+                height: 10,
               ),
-              _CardBoard(),
+              _CardBoard('3'),
               SizedBox(
-                height: 15,
+                height: 10,
               ),
-              _CardBoard(),
+              _CardBoard('4'),
               SizedBox(
-                height: 15,
+                height: 10,
               ),
-              _CardBoard(),
+              _CardBoard('5'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('6'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('7'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('8'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('9'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('10'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('11'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('12'),
             ],
           ),
         ),
@@ -108,7 +136,7 @@ Widget _subimagerow1(counter) {
   );
 }
 
-Widget _CardBoard() {
+Widget _CardBoard(counter) {
   return Container(
     decoration: BoxDecoration(
       color: Colors.white,
@@ -129,7 +157,7 @@ Widget _CardBoard() {
 
               children: <Widget>[
                 CircleAvatar(
-                  backgroundImage: AssetImage('lib/assets/9.jpg'),
+                  backgroundImage: AssetImage('lib/assets/'+counter+'.jpg'),
                 )
               ],
             ),
@@ -172,7 +200,7 @@ Widget _CardBoard() {
                 height: 300,
                 width: 380,
                 child: Image(
-              image: AssetImage("lib/assets/9.jpg"),
+              image: AssetImage("lib/assets/" +counter+".jpg"),
               fit: BoxFit.cover,
             ),),
           ],
