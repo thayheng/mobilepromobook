@@ -88,6 +88,7 @@ Widget _boxNotification(image) {
             Row(
               children: <Widget>[
                 CircleAvatar(
+                  radius: 30,
                   backgroundImage: AssetImage('lib/assets/' + image + '.jpg'),
                 )
               ],

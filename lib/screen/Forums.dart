@@ -5,25 +5,20 @@ class ForumsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      body: Center(
-        child: ListView(
-          children: <Widget>[
-            _Cardforum(),
-          ],
-        ),
-      )
-    );
+        body: Center(
+      child: ListView(
+        children: <Widget>[
+          _Cardforum(),
+        ],
+      ),
+    ));
   }
 }
 
 Widget _Cardforum() {
   return Container(
-    child: Column(
-
-    ),
+    child: Column(),
   );
 }
 
-Widget _subCard() {
-
-}
+Widget _subCard() {}

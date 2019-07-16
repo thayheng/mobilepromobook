@@ -15,43 +15,7 @@ class VideosScreen extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              _CardBoard('1'),
-              SizedBox(
-                height: 10,
-              ),
-              _CardBoard('2'),
-              SizedBox(
-                height: 10,
-              ),
-              _CardBoard('3'),
-              SizedBox(
-                height: 10,
-              ),
-              _CardBoard('4'),
-              SizedBox(
-                height: 10,
-              ),
-              _CardBoard('5'),
-              SizedBox(
-                height: 10,
-              ),
-              _CardBoard('6'),
-              SizedBox(
-                height: 10,
-              ),
-              _CardBoard('7'),
-              SizedBox(
-                height: 10,
-              ),
-              _CardBoard('8'),
-              SizedBox(
-                height: 10,
-              ),
-              _CardBoard('9'),
-              SizedBox(
-                height: 10,
-              ),
-              _CardBoard('10'),
+              _CardBoard('12'),
               SizedBox(
                 height: 10,
               ),
@@ -59,7 +23,43 @@ class VideosScreen extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              _CardBoard('12'),
+              _CardBoard('10'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('9'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('8'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('7'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('6'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('5'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('4'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('3'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('2'),
+              SizedBox(
+                height: 10,
+              ),
+              _CardBoard('1'),
             ],
           ),
         ),
@@ -199,7 +199,7 @@ Widget _CardBoard(counter) {
               height: 300,
               width: 380,
               child: Image(
-                image: AssetImage("lib/assets/"+counter+".jpg"),
+                image: AssetImage("lib/assets/" + counter + ".jpg"),
                 fit: BoxFit.cover,
               ),
             ),

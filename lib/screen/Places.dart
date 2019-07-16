@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:async';
 
-class PlacesScreen extends StatelessWidget{
+class PlacesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Scaffold(
-      body: MapSample()
-    );
+    return Scaffold(body: MapSample());
   }
 }
 
@@ -38,5 +36,4 @@ class MapSampleState extends State<MapSample> {
       ),
     );
   }
-
 }
