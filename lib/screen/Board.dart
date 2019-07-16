@@ -154,7 +154,6 @@ Widget _CardBoard(counter) {
         Row(
           children: <Widget>[
             Row(
-
               children: <Widget>[
                 CircleAvatar(
                   backgroundImage: AssetImage('lib/assets/'+counter+'.jpg'),
@@ -162,23 +161,23 @@ Widget _CardBoard(counter) {
               ],
             ),
             SizedBox(
-              width: 10,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text('Pizza Company'),
-                Row(
-                  children: <Widget>[
-                    Text('3 hrs'),
-                    Icon(
-                      Icons.public,
-                      size: 15,
-                    ),
-                  ],
-                )
-              ],
-            )
+  width: 10,
+  ),
+  Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: <Widget>[
+  Text('Pizza Company'),
+  Row(
+  children: <Widget>[
+  Text('3 hrs'),
+  Icon(
+  Icons.public,
+  size: 15,
+  ),
+  ],
+  )
+  ],
+  )
           ],
         ),
         SizedBox(
