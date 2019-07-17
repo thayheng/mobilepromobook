@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SearchBar extends StatelessWidget {
+
+
   final void Function(String) onTextChange;
 
   SearchBar({this.onTextChange});

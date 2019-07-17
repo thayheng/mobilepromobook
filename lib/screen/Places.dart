@@ -6,7 +6,9 @@ class PlacesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Scaffold(body: MapSample());
+    return Scaffold(
+      body: MapSample(),
+    );
   }
 }
 
