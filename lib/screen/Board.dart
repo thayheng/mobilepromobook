@@ -86,9 +86,10 @@ class BoardScreen extends StatelessWidget {
           Container(
             height: 80,
             child: ListView(
-                scrollDirection: Axis.horizontal,
-                //shrinkWrap: true,
-                children: makeContainers()),
+              scrollDirection: Axis.horizontal,
+              //shrinkWrap: true,
+              children: makeContainers(),
+            ),
           )
         ],
       ),
@@ -157,7 +158,7 @@ Widget _CardBoard(counter) {
               children: <Widget>[
                 CircleAvatar(
                   backgroundImage: AssetImage('lib/assets/' + counter + '.jpg'),
-                )
+                ),
               ],
             ),
             SizedBox(
